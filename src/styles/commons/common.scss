@@ -19,3 +19,8 @@
   color: $color;
   transition: $transition;
 }
+
+@mixin button-colors-hover($background-color, $color) {
+  background-color: $background-color;
+  color: $color;
+}

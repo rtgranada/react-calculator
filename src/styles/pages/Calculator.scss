@@ -24,6 +24,9 @@ button {
   justify-content: flex-end;
   padding: 1em;
   color: $result-color;
+  width: 100%;
+  inline-size: 100%;
+  overflow-wrap: anywhere;
   p {
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
@@ -56,10 +59,9 @@ button {
 .btnAction {
   @include button-colors($btn-action-bg-color, $btn-action-font-color, 0.1s);
   &:hover {
-    @include button-colors(
+    @include button-colors-hover(
       $btn-action-bg-color-hover,
-      $btn-action-font-color,
-      0.1s
+      $btn-action-font-color
     );
   }
   &:active {
@@ -70,10 +72,9 @@ button {
 .btnManu {
   @include button-colors($btn-menu-bg-color, $btn-menu-font-color, 0.1s);
   &:hover {
-    @include button-colors(
+    @include button-colors-hover(
       $btn-menu-bg-color-hover,
-      $btn-menu-font-color,
-      0.1s
+      $btn-menu-font-color
     );
   }
   &:active {
@@ -84,10 +85,9 @@ button {
 .btnNumber {
   @include button-colors($btn-number-bg-color, $btn-number-font-color, 0.1s);
   &:hover {
-    @include button-colors(
+    @include button-colors-hover(
       $btn-number-bg-color-hover,
-      $btn-number-font-color,
-      0.1s
+      $btn-number-font-color
     );
   }
   &:active {
