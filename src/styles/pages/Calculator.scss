@@ -97,7 +97,7 @@ button {
   }
 }
 
-@media (max-width: 524px) {
+@media (max-width: 526px) {
   .main {
     max-width: 80%;
   }
@@ -124,5 +124,75 @@ button {
 @media (max-width: 426px) {
   .main {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 410px) {
+  button {
+    @include button-style(2.7em, 2.5em, 1.5em, none, 2em, 0.3em);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 381px) {
+  button {
+    @include button-style(2.6em, 2.5em, 1.5em, none, 2em, 0.3em);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 372px) {
+  button {
+    @include button-style(2.4em, 2.5em, 1.45em, none, 2em, 0.3em);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 372px) {
+  button {
+    @include button-style(2.4em, 2.5em, 1.4em, none, 2em, 0.3em);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 332px) {
+  button {
+    @include button-style(2.4em, 2.5em, 1.35em, none, 2em, 0.3em);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 323px) {
+  button {
+    @include button-style(2.4em, 2.5em, 1.3em, none, 2em, 0.3em);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+@media (max-width: 313px) {
+  button {
+    @include button-style(2.4em, 2.5em, 1.25em, none, 2em, 0.3em);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+@media (max-width: 280px) {
+  button {
+    @include button-style(2.4em, 2.5em, 1.12em, none, 2em, 0.3em);
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
