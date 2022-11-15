@@ -1,0 +1,20 @@
+@mixin button-style(
+  $width,
+  $height,
+  $font-size,
+  $border,
+  $border-radius,
+  $margin
+) {
+  width: $width;
+  height: $height;
+  font-size: $font-size;
+  border: $border;
+  border-radius: $border-radius;
+  margin: $margin;
+}
+
+@mixin button-colors($background-color, $color) {
+  background-color: $background-color;
+  color: $color;
+} ;
