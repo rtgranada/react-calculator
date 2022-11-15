@@ -14,7 +14,8 @@
   margin: $margin;
 }
 
-@mixin button-colors($background-color, $color) {
+@mixin button-colors($background-color, $color, $transition) {
   background-color: $background-color;
   color: $color;
-} ;
+  transition: $transition;
+}

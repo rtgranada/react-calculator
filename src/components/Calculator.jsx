@@ -23,8 +23,6 @@ export default function Calculator() {
   };
 
   const updateCalc = (value) => {
-    console.log("value", value);
-    console.log("calc", calc);
     if (
       (operators.includes(value) && calc === "") ||
       (operators.includes(value) && operators.includes(calc.slice(-1)))

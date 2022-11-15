@@ -21,7 +21,7 @@ button {
 }
 .result {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   padding: 1em;
   color: $result-color;
   p {
@@ -54,23 +54,44 @@ button {
   justify-content: space-between;
 }
 .btnAction {
-  @include button-colors($btn-action-bg-color, $btn-action-font-color);
+  @include button-colors($btn-action-bg-color, $btn-action-font-color, 0.1s);
   &:hover {
-    @include button-colors($btn-action-bg-color-hover, $btn-action-font-color);
+    @include button-colors(
+      $btn-action-bg-color-hover,
+      $btn-action-font-color,
+      0.1s
+    );
+  }
+  &:active {
+    background-color: $btn-click;
   }
 }
 
 .btnManu {
-  @include button-colors($btn-menu-bg-color, $btn-menu-font-color);
+  @include button-colors($btn-menu-bg-color, $btn-menu-font-color, 0.1s);
   &:hover {
-    @include button-colors($btn-menu-bg-color-hover, $btn-menu-font-color);
+    @include button-colors(
+      $btn-menu-bg-color-hover,
+      $btn-menu-font-color,
+      0.1s
+    );
+  }
+  &:active {
+    background-color: $btn-click;
   }
 }
 
 .btnNumber {
-  @include button-colors($btn-number-bg-color, $btn-number-font-color);
+  @include button-colors($btn-number-bg-color, $btn-number-font-color, 0.1s);
   &:hover {
-    @include button-colors($btn-number-bg-color-hover, $btn-number-font-color);
+    @include button-colors(
+      $btn-number-bg-color-hover,
+      $btn-number-font-color,
+      0.1s
+    );
+  }
+  &:active {
+    background-color: $btn-click;
   }
 }
 
