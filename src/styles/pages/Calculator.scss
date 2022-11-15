@@ -31,7 +31,8 @@ button {
   }
 
   span {
-    font-size: 22px;
+    font-size: 18px;
+    color: $result-calc-color;
   }
 }
 
@@ -39,7 +40,17 @@ button {
   width: 25%;
   float: right;
 }
+
+.numberButtons,
+.especialButtons,
+.menuButtons {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
 .d-flex {
+  width: 100%;
   justify-content: space-between;
 }
 .btnAction {

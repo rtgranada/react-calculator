@@ -4,6 +4,24 @@ export default function Calculator() {
   const [calc, setCalc] = useState("");
   const [result, setResult] = useState("");
   const operators = ["/", "*", "+", "-", "."];
+
+  const createDigits = () => {
+    const digits = [];
+
+    for (let i = 9; i > 0; i--) {
+      digits.push(
+        <button
+          key={i}
+          className="btnNumber"
+          onClick={() => updateCalc(i.toString())}
+        >
+          {i}
+        </button>
+      );
+    }
+    return digits;
+  };
+
   const updateCalc = (value) => {
     console.log("value", value);
     console.log("calc", calc);
@@ -72,46 +90,18 @@ export default function Calculator() {
             </button>
           </div>
           <div className="menuButtons">
-            <button className="btnManu" onClick={clear}>
-              AC
+            <button className="btnManu" onClick={percentage}>
+              %
             </button>
             <button className="btnManu" onClick={operatorHandler}>
               +/-
             </button>
-            <button className="btnManu" onClick={percentage}>
-              %
+            <button className="btnManu" onClick={clear}>
+              AC
             </button>
           </div>
 
-          <div className="numberButtons">
-            <button className="btnNumber" onClick={() => updateCalc("7")}>
-              7
-            </button>
-            <button className="btnNumber" onClick={() => updateCalc("8")}>
-              8
-            </button>
-            <button className="btnNumber" onClick={() => updateCalc("9")}>
-              9
-            </button>
-            <button className="btnNumber" onClick={() => updateCalc("4")}>
-              4
-            </button>
-            <button className="btnNumber" onClick={() => updateCalc("5")}>
-              5
-            </button>
-            <button className="btnNumber" onClick={() => updateCalc("6")}>
-              6
-            </button>
-            <button className="btnNumber" onClick={() => updateCalc("1")}>
-              1
-            </button>
-            <button className="btnNumber" onClick={() => updateCalc("2")}>
-              2
-            </button>
-            <button className="btnNumber" onClick={() => updateCalc("3")}>
-              3
-            </button>
-          </div>
+          <div className="numberButtons">{createDigits()}</div>
 
           <div className="especialButtons">
             <div className="d-flex">
